@@ -1,14 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, {useState} from 'react'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { colors } from '../../../utils/colors'
 import { Gap } from '../../atoms'
 
-const CategoryMovie = ({active, text}) => {
+const CategoryMovie = ({text, onPress, activeText}) => {
     return (
-        <View>
-            <Text style={styles.title(active)}>{text}</Text>
-            { active && <View style={styles.line} /> }
-        </View>
+        <TouchableOpacity onPress={onPress}>
+            <Text style={styles.title(activeText === text && activeText)}>{text}</Text>
+            { activeText === text && <View style={styles.line} /> }
+        </TouchableOpacity>
     )
 }
 
