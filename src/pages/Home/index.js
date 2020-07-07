@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { Header, TypeMovie, CategoryMovie, ItemMovie, Gap, RatedMovie } from '../../components'
 import { colors } from '../../utils'
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [categoryActive, setCategoryActive] = useState('In Theater')
     const [typeActive, setTypeActive] = useState('Comedy')
     return (
@@ -39,21 +39,21 @@ const Home = () => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                <View style={styles.wrapperSectionItem}>
                     <Gap width={32} />
-                    <ItemMovie />
+                    <ItemMovie onPress={() => navigation.navigate('DetailMovie')} />
                     <Gap width={25} />
-                    <ItemMovie />
+                    <ItemMovie onPress={() => navigation.navigate('DetailMovie')} />
                     <Gap width={25} />
-                    <ItemMovie />
+                    <ItemMovie onPress={() => navigation.navigate('DetailMovie')} />
                     <Gap width={25} />
                </View> 
             </ScrollView>
             <View style={styles.wrapperSectionTopRated}>
                 <Text style={styles.sectionLabel}>Top Rated Movie</Text>
-                <RatedMovie />
-                <RatedMovie />
-                <RatedMovie />
-                <RatedMovie />
-                <RatedMovie />
+                <RatedMovie onPress={() => navigation.navigate('DetailMovie')} />
+                <RatedMovie onPress={() => navigation.navigate('DetailMovie')} />
+                <RatedMovie onPress={() => navigation.navigate('DetailMovie')} />
+                <RatedMovie onPress={() => navigation.navigate('DetailMovie')} />
+                <RatedMovie onPress={() => navigation.navigate('DetailMovie')} />
             </View>
         </ScrollView>
     )

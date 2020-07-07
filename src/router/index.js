@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { Splash, GetStarted, Home } from '../pages'
+import { Splash, GetStarted, Home, DetailMovie } from '../pages'
 
 const Stack = createStackNavigator();
 
@@ -11,6 +11,7 @@ const Router = () => {
             <Stack.Screen name="Splash" component={Splash}  options={{headerShown: false}}/>
             <Stack.Screen name="GetStarted" component={GetStarted}  options={{headerShown: false}}/>
             <Stack.Screen name="Home" component={Home}  options={{headerShown: false}}/>
+            <Stack.Screen name="DetailMovie" component={DetailMovie}  options={{headerShown: false}}/>
         </Stack.Navigator>
     )
 }

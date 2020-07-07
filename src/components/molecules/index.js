@@ -1,13 +1,20 @@
 import Header from './Header'
-import TypeMovie from './TypeMovie'
 import CategoryMovie from './CategoryMovie'
 import ItemMovie from './ItemMovie'
 import RatedMovie from './RatedMovie'
+import RateBoard from './RateBoard'
+import DescMovie from './DescMovie'
+import HeadContent from './HeadContent'
+import TeamMovie from './TeamMovie'
+
 
 export {
     Header,
-    TypeMovie,
     CategoryMovie,
     ItemMovie,
-    RatedMovie
+    RatedMovie,
+    RateBoard,
+    DescMovie,
+    HeadContent,
+    TeamMovie
 }

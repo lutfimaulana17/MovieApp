@@ -2,10 +2,11 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Dummy2, IconStar } from '../../../assets'
 import { colors } from '../../../utils'
+import { TouchableOpacity } from 'react-native'
 
-const RatedMovie = () => {
+const RatedMovie = ({onPress}) => {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity onPress={onPress} style={styles.container}>
             <Image source={Dummy2} style={styles.avatar} />
             <View style={styles.profile}>
                 <Text style={styles.name}>Ford v Ferrari</Text>
@@ -18,7 +19,7 @@ const RatedMovie = () => {
                 <IconStar />
                 <IconStar />
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
