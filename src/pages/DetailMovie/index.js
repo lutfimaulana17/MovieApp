@@ -9,7 +9,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const DetailMovie = ({navigation}) => {
     return (
-        <ScrollView style={styles.page}>
+        <ScrollView showsHorizontalScrollIndicator={false} style={styles.page}>
             <ImageBackground source={Dummy3} style={styles.background}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <IconBack style={styles.iconback} />
